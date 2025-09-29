@@ -38,6 +38,91 @@ const HeroSection = () => {
           The next evolutionary leap for AI
         </motion.p>
         
+        {/* Neural Network Image - Main Center */}
+        <motion.div 
+          className="mt-12 flex justify-center"
+          initial={{ opacity: 0, scale: 0.1, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
+        >
+          <motion.img 
+            src="/neural-3.webp" 
+            alt="Neural Network Visualization"
+            className="max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-90"
+            initial={{ filter: "blur(5px)" }}
+            animate={{ filter: "blur(0px)" }}
+            transition={{ duration: 1.5, delay: 1.4, ease: "easeOut" }}
+            whileHover={{ 
+              scale: 1.05,
+              filter: "brightness(1.1)",
+              transition: { duration: 0.3 }
+            }}
+          />
+        </motion.div>
+
+        {/* Scattered Neural Network Images - Background */}
+        {/* Top Left */}
+        <motion.div 
+          className="absolute top-10 left-4 md:left-8"
+          initial={{ 
+            opacity: 0, 
+            scale: 0.1, 
+            x: "calc(50vw - 2rem)", 
+            y: "calc(50vh - 2.5rem)" 
+          }}
+          animate={{ 
+            opacity: 0.6, 
+            scale: 0.6, 
+            x: 0, 
+            y: 0 
+          }}
+          transition={{ 
+            duration: 2.5, 
+            delay: 1.5, 
+            ease: "easeOut" 
+          }}
+        >
+          <motion.img 
+            src="/neural-3.webp" 
+            alt="Neural Network Background"
+            className="w-32 md:w-40 h-auto"
+            initial={{ filter: "blur(8px)" }}
+            animate={{ filter: "blur(0px)" }}
+            transition={{ duration: 2, delay: 1.7, ease: "easeOut" }}
+          />
+        </motion.div>
+
+        {/* Bottom Right */}
+        <motion.div 
+          className="absolute bottom-10 right-4 md:right-8"
+          initial={{ 
+            opacity: 0, 
+            scale: 0.1, 
+            x: "calc(-50vw + 2rem)", 
+            y: "calc(-50vh + 2.5rem)" 
+          }}
+          animate={{ 
+            opacity: 0.6, 
+            scale: 0.5, 
+            x: 0, 
+            y: 0 
+          }}
+          transition={{ 
+            duration: 2.8, 
+            delay: 1.8, 
+            ease: "easeOut" 
+          }}
+        >
+          <motion.img 
+            src="/neural-3.webp" 
+            alt="Neural Network Background"
+            className="w-28 md:w-36 h-auto"
+            initial={{ filter: "blur(8px)" }}
+            animate={{ filter: "blur(0px)" }}
+            transition={{ duration: 2, delay: 2, ease: "easeOut" }}
+          />
+        </motion.div>
+        
         {/* Glowing orbs */}
         <motion.div 
           className="relative mt-16"

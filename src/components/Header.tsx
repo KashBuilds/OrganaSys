@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      // On homepage, scroll to contact section
+      e.preventDefault();
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // On other pages, let the Link handle navigation to /contact
   };
 
   return (
@@ -68,14 +81,17 @@ const Header = () => {
                 Neuroplatform
               </Link>
             </motion.div>
-            <motion.a 
-              href="#" 
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-body"
+            <motion.div
               whileHover={{ y: -2 }}
               transition={{ duration: 0.2 }}
             >
-              Articles
-            </motion.a>
+              <Link 
+                to="/articles"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-body"
+              >
+                Articles
+              </Link>
+            </motion.div>
             <motion.a 
               href="#" 
               className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-body"
@@ -84,22 +100,29 @@ const Header = () => {
             >
               Media
             </motion.a>
-            <motion.a 
-              href="#" 
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-body"
+            <motion.div
               whileHover={{ y: -2 }}
               transition={{ duration: 0.2 }}
             >
-              Contact
-            </motion.a>
-            <motion.button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-300 font-body font-medium"
+              <Link 
+                to="/contact"
+                onClick={handleContactClick}
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-body"
+              >
+                Contact
+              </Link>
+            </motion.div>
+            <motion.a 
+              href="/OrganaSysDocumentation.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-300 font-body font-medium inline-block"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
               Docs
-            </motion.button>
+            </motion.a>
           </nav>
 
           {/* Mobile menu button */}
@@ -175,15 +198,18 @@ const Header = () => {
                     Neuroplatform
                   </Link>
                 </motion.div>
-                <motion.a 
-                  href="#" 
-                  className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Articles
-                </motion.a>
+                  <Link 
+                    to="/articles"
+                    className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    Articles
+                  </Link>
+                </motion.div>
                 <motion.a 
                   href="#" 
                   className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300"
@@ -193,24 +219,31 @@ const Header = () => {
                 >
                   Media
                 </motion.a>
-                <motion.a 
-                  href="#" 
-                  className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contact
-                </motion.a>
-                <motion.button 
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg transition-colors duration-300 font-medium text-xl"
+                  <Link 
+                    to="/contact"
+                    onClick={handleContactClick}
+                    className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    Contact
+                  </Link>
+                </motion.div>
+                <motion.a 
+                  href="/OrganaSysDocumentation.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg transition-colors duration-300 font-medium text-xl inline-block"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Docs
-                </motion.button>
+                </motion.a>
               </nav>
             </motion.div>
           </motion.div>

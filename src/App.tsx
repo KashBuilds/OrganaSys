@@ -5,12 +5,13 @@ import HeroSection from './components/HeroSection';
 import DigitalToBioSection from './components/DigitalToBioSection';
 import EnergyEfficiencySection from './components/EnergyEfficiencySection';
 import KeyBenefitsSection from './components/KeyBenefitsSection';
-import NewsletterSection from './components/NewsletterSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import SimpleAnimations from './components/SimpleAnimations';
 import LivePage from './components/LivePage';
 import NeuroplatformPage from './components/NeuroplatformPage';
+import ContactPage from './components/ContactPage';
+import ArticlesPage from './components/ArticlesPage';
 
 function HomePage() {
   return (
@@ -21,7 +22,6 @@ function HomePage() {
       <DigitalToBioSection />
       <EnergyEfficiencySection />
       <KeyBenefitsSection />
-      <NewsletterSection />
       <ContactSection />
       <Footer />
     </>
@@ -36,6 +36,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/live" element={<LivePage />} />
           <Route path="/neuroplatform" element={<NeuroplatformPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

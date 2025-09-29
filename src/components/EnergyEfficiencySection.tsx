@@ -46,7 +46,7 @@ const EnergyEfficiencySection = () => {
             {/* Central content */}
             <div className="flex flex-col items-center justify-center h-full">
               <motion.div 
-                className="text-5xl md:text-7xl font-display text-white mb-2"
+                className="text-4xl md:text-6xl font-display text-white mb-2 flex flex-col items-center"
                 animate={{
                   scale: [1, 1.05, 1],
                   opacity: [0.8, 1, 0.8]
@@ -57,11 +57,12 @@ const EnergyEfficiencySection = () => {
                   ease: "easeInOut"
                 }}
               >
-                1 Million
+                <div>1</div>
+                <div>Million</div>
               </motion.div>
               
               <motion.div 
-                className="text-sm md:text-base font-body text-orange-400 font-medium text-center px-4"
+                className="text-xs md:text-sm font-body text-orange-400 font-medium text-center px-4"
                 animate={{
                   y: [0, -2, 0]
                 }}

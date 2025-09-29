@@ -60,11 +60,11 @@ const SimpleAnimations = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Hero Section - Always visible atoms */}
       <div 
         ref={heroAtomsRef}
-        className="absolute inset-0"
+        className="absolute inset-0 overflow-hidden"
       >
         {/* Floating atoms - more visible */}
         {[...Array(30)].map((_, i) => (
@@ -104,7 +104,10 @@ const SimpleAnimations = () => {
         style={{
           background: 'radial-gradient(circle, rgba(251, 146, 60, 0.9) 0%, rgba(59, 130, 246, 0.7) 50%, rgba(236, 72, 153, 0.5) 100%)',
           borderRadius: '50%',
-          filter: 'blur(30px)'
+          filter: 'blur(30px)',
+          transform: 'translateX(50%)',
+          maxWidth: '50vw',
+          maxHeight: '50vh'
         }}
       />
 
@@ -115,7 +118,9 @@ const SimpleAnimations = () => {
         style={{
           background: 'radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(251, 146, 60, 0.4) 30%, rgba(236, 72, 153, 0.3) 60%, transparent 100%)',
           borderRadius: '50%',
-          filter: 'blur(40px)'
+          filter: 'blur(40px)',
+          maxWidth: '80vw',
+          maxHeight: '80vh'
         }}
       />
     </div>
@@ -123,6 +128,8 @@ const SimpleAnimations = () => {
 };
 
 export default SimpleAnimations;
+
+
 
 
 
