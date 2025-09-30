@@ -92,6 +92,18 @@ const NeuroplasticityArticle = () => {
                     </p>
                   </div>
                 </div>
+
+                {/* Image 1 - After Modulating Existing Synapses */}
+                <div className="mt-8 rounded-xl overflow-hidden">
+                  <img 
+                    src="/article 5.png" 
+                    alt="Synaptic Structure Visualization" 
+                    className="w-full h-auto"
+                  />
+                  <p className="text-sm text-gray-400 text-center mt-2 italic">
+                    Figure 1: Synaptic structure showing neurotransmitter release and receptor interaction
+                  </p>
+                </div>
               </div>
 
               {/* Section 2 */}
@@ -125,6 +137,18 @@ const NeuroplasticityArticle = () => {
                 <p className="text-gray-300 leading-relaxed">
                   We can see how networks react in controlled settings when we deal with brain slices (pieces of actual tissue with several interconnected neurones). Methods like patch clamping, where near every variable is controlled, researchers can examine individual neurones.
                 </p>
+
+                {/* Image 2 - After Slices from a Brain */}
+                <div className="mt-8 rounded-xl overflow-hidden">
+                  <img 
+                    src="/neural-3.webp" 
+                    alt="Neural Network Comparison" 
+                    className="w-full h-auto"
+                  />
+                  <p className="text-sm text-gray-400 text-center mt-2 italic">
+                    Figure 2: Comparison of brain slices and individual neuron analysis methods
+                  </p>
+                </div>
               </div>
 
               {/* Section 5 - OrganaSys */}
