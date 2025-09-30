@@ -22,7 +22,7 @@ const HeroSection = () => {
         style={{ y, opacity, scale }}
       >
         <motion.h1 
-          className="hero-title text-6xl md:text-8xl font-display text-white mb-8 tracking-tight"
+          className="hero-title text-4xl sm:text-6xl md:text-8xl font-display text-white mb-6 sm:mb-8 tracking-tight"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
@@ -30,7 +30,7 @@ const HeroSection = () => {
           BIOCOMPUTING
         </motion.h1>
         <motion.p 
-          className="hero-subtitle text-xl md:text-2xl font-body text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="hero-subtitle text-lg sm:text-xl md:text-2xl font-body text-gray-300 max-w-2xl mx-auto leading-relaxed px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
@@ -40,7 +40,7 @@ const HeroSection = () => {
         
         {/* Neural Network Image - Main Center */}
         <motion.div 
-          className="mt-12 flex justify-center"
+          className="mt-8 sm:mt-12 flex justify-center px-4"
           initial={{ opacity: 0, scale: 0.1, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <motion.img 
             src="/neural-3.webp" 
             alt="Neural Network Visualization"
-            className="max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-90"
+            className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl w-full h-auto opacity-90"
             initial={{ filter: "blur(5px)" }}
             animate={{ filter: "blur(0px)" }}
             transition={{ duration: 1.5, delay: 1.4, ease: "easeOut" }}

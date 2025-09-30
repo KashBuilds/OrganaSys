@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -10,6 +10,18 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const handleContactClick = (e: React.MouseEvent) => {
     if (location.pathname === '/') {
@@ -25,7 +37,7 @@ const Header = () => {
 
   return (
     <motion.header 
-      className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-700/50"
+      className="fixed top-0 w-full z-[60] bg-slate-900/80 backdrop-blur-sm border-b border-slate-700/50"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -150,13 +162,13 @@ const Header = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-50 md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
             <motion.div
               className="relative z-50 flex flex-col items-center justify-center h-full px-4"
               initial={{ y: -50, opacity: 0 }}
