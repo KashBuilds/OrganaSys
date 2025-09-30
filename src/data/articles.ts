@@ -31,14 +31,14 @@ export const articles: Article[] = [
     link: '/articles/neurons-to-processors'
   },
   {
-    id: 'brain-on-chip',
-    title: 'Why Brain-on-a-Chip research matters for the future of AI',
-    excerpt: 'Wetware Computing—that bold idea of using living neuronal networks to compute—isn\'t sci-fi anymore. A groundbreaking new review, Advanced Brain-on-a-Chip for Wetware Computing: A Review, just landed in Advanced Science and...',
+    id: 'real-neurons-lab',
+    title: 'Confirming we\'re working with real neurons in our lab',
+    excerpt: 'At OrganaSys\' we grow neurospheres that we train to perform computational tasks. From our human eyes, we can\'t really confirm whether it is or not, even with a standard microscope but we just about get the structure. With an electron microscopy, we can observe every detail of their morphology...',
     author: 'Ewelina Kurtys',
     date: 'August 21, 2025',
-    image: 'gradient-orange',
-    categories: ['Scientific', 'Innovation and Discovery', 'News'],
-    link: '#'
+    image: '/articleimage.jpg',
+    categories: ['Scientific'],
+    link: '/articles/real-neurons-lab'
   }
 ];
 

@@ -14,6 +14,7 @@ import ContactPage from './components/ContactPage';
 import ArticlesPage from './components/ArticlesPage';
 import NeuroplasticityArticle from './components/NeuroplasticityArticle';
 import NeuronsToProcessorsArticle from './components/NeuronsToProcessorsArticle';
+import RealNeuronsLabArticle from './components/RealNeuronsLabArticle';
 
 function HomePage() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/neuroplasticity" element={<NeuroplasticityArticle />} />
           <Route path="/articles/neurons-to-processors" element={<NeuronsToProcessorsArticle />} />
+          <Route path="/articles/real-neurons-lab" element={<RealNeuronsLabArticle />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
