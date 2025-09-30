@@ -154,34 +154,44 @@ const ArticlesPage = () => {
                     <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                       {/* Social Icons */}
                       <div className="flex items-center space-x-4">
-                        <motion.button
+                        <motion.a
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.origin + article.link)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-gray-400 hover:text-blue-600 transition-colors"
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Facebook className="w-5 h-5" />
-                        </motion.button>
-                        <motion.button
+                        </motion.a>
+                        <motion.a
+                          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(window.location.origin + article.link)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-gray-400 hover:text-blue-400 transition-colors"
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Twitter className="w-5 h-5" />
-                        </motion.button>
-                        <motion.button
+                        </motion.a>
+                        <motion.a
+                          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.origin + article.link)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-gray-400 hover:text-blue-700 transition-colors"
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Linkedin className="w-5 h-5" />
-                        </motion.button>
-                        <motion.button
+                        </motion.a>
+                        <motion.a
+                          href={`mailto:?subject=${encodeURIComponent(article.title)}&body=${encodeURIComponent('Check out this article: ' + window.location.origin + article.link)}`}
                           className="text-gray-400 hover:text-gray-600 transition-colors"
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Mail className="w-5 h-5" />
-                        </motion.button>
+                        </motion.a>
                       </div>
 
                         {/* Continue Reading */}

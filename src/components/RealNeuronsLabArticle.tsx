@@ -21,9 +21,6 @@ const RealNeuronsLabArticle = () => {
             <h1 className="text-4xl md:text-5xl font-display text-white mb-6">
               Confirming we're working with real neurons in our lab
             </h1>
-            <div className="text-gray-400 mb-8">
-              by Ewelina Kurtys | August 21, 2025
-            </div>
           </motion.div>
 
           {/* Featured Image */}
