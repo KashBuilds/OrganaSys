@@ -13,6 +13,7 @@ import NeuroplatformPage from './components/NeuroplatformPage';
 import ContactPage from './components/ContactPage';
 import ArticlesPage from './components/ArticlesPage';
 import NeuroplasticityArticle from './components/NeuroplasticityArticle';
+import NeuronsToProcessorsArticle from './components/NeuronsToProcessorsArticle';
 
 function HomePage() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/neuroplatform" element={<NeuroplatformPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/neuroplasticity" element={<NeuroplasticityArticle />} />
+          <Route path="/articles/neurons-to-processors" element={<NeuronsToProcessorsArticle />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>

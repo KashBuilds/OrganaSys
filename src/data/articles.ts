@@ -21,6 +21,16 @@ export const articles: Article[] = [
     link: '/articles/neuroplasticity'
   },
   {
+    id: 'neurons-to-processors',
+    title: 'Neurons to Processors',
+    excerpt: 'The concept of harnessing living neuronal networks as computational units, once confined to the realm of science fiction is rapidly becoming a reality. These living networks have already demonstrated real and tangible tasks such as pathfinding, obstacle avoidance, controlling robots and playing games...',
+    author: 'Ewelina Kurtys',
+    date: 'August 21, 2025',
+    image: '/baseimage.jpg',
+    categories: ['Scientific'],
+    link: '/articles/neurons-to-processors'
+  },
+  {
     id: 'brain-on-chip',
     title: 'Why Brain-on-a-Chip research matters for the future of AI',
     excerpt: 'Wetware Computing—that bold idea of using living neuronal networks to compute—isn\'t sci-fi anymore. A groundbreaking new review, Advanced Brain-on-a-Chip for Wetware Computing: A Review, just landed in Advanced Science and...',
