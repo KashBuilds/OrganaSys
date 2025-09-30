@@ -34,7 +34,7 @@ const RealNeuronsLabArticle = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src="/articleimage.jpg" 
+              src="/article2.png" 
               alt="Real Neurons in Lab" 
               className="w-full h-auto"
             />
@@ -58,7 +58,7 @@ const RealNeuronsLabArticle = () => {
               {/* Image 1 */}
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="/articleimage2.jpg" 
+                  src="/article2.png" 
                   alt="Neurosphere Electron Microscopy" 
                   className="w-full h-auto"
                 />
@@ -77,7 +77,7 @@ const RealNeuronsLabArticle = () => {
               {/* Image 2 */}
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="/articleimage2.jpg" 
+                  src="/article2(2).png" 
                   alt="Molecular Detection" 
                   className="w-full h-auto"
                 />
@@ -112,7 +112,7 @@ const RealNeuronsLabArticle = () => {
               {/* Image 3 */}
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="/articleimage2.jpg" 
+                  src="/article2(3).png" 
                   alt="Immunofluorescent Staining Results" 
                   className="w-full h-auto"
                 />

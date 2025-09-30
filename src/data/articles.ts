@@ -36,7 +36,7 @@ export const articles: Article[] = [
     excerpt: 'At OrganaSys\' we grow neurospheres that we train to perform computational tasks. From our human eyes, we can\'t really confirm whether it is or not, even with a standard microscope but we just about get the structure. With an electron microscopy, we can observe every detail of their morphology...',
     author: 'Ewelina Kurtys',
     date: 'August 21, 2025',
-    image: '/articleimage.jpg',
+    image: '/article2.png',
     categories: ['Scientific'],
     link: '/articles/real-neurons-lab'
   }
