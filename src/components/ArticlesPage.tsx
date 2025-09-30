@@ -61,7 +61,7 @@ const ArticlesPage = () => {
                   <Link to="/articles/neuroplasticity">
                     <div className="relative h-64 md:h-80 overflow-hidden">
                       <img 
-                        src="/article 5.png" 
+                        src="/baseimage.jpg" 
                         alt="Neuroplasticity" 
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />

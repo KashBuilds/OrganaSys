@@ -34,7 +34,7 @@ const NeuroplasticityArticle = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src="/article 5.png" 
+              src="/baseimage.jpg" 
               alt="Neuroplasticity" 
               className="w-full h-auto"
             />
