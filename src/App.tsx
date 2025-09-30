@@ -12,6 +12,7 @@ import LivePage from './components/LivePage';
 import NeuroplatformPage from './components/NeuroplatformPage';
 import ContactPage from './components/ContactPage';
 import ArticlesPage from './components/ArticlesPage';
+import NeuroplasticityArticle from './components/NeuroplasticityArticle';
 
 function HomePage() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/live" element={<LivePage />} />
           <Route path="/neuroplatform" element={<NeuroplatformPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/articles/neuroplasticity" element={<NeuroplasticityArticle />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>

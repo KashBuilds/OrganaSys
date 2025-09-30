@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Linkedin, Mail, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 
 const ArticlesPage = () => {
@@ -49,7 +50,7 @@ const ArticlesPage = () => {
 
               {/* Article Cards */}
               <div className="space-y-8">
-                {/* Featured Article */}
+                {/* Neuroplasticity Article */}
                 <motion.article 
                   className="bg-white rounded-2xl overflow-hidden shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -57,17 +58,15 @@ const ArticlesPage = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   {/* Article Image */}
-                  <div className="relative h-64 md:h-80 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-white text-center">
-                        <div className="w-32 h-32 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                          <div className="w-16 h-16 bg-white/30 rounded-full"></div>
-                        </div>
-                        <p className="text-sm opacity-80">Neural Network Visualization</p>
-                      </div>
+                  <Link to="/articles/neuroplasticity">
+                    <div className="relative h-64 md:h-80 overflow-hidden">
+                      <img 
+                        src="/article 5.png" 
+                        alt="Neuroplasticity" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Article Content */}
                   <div className="p-8">
@@ -77,13 +76,15 @@ const ArticlesPage = () => {
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                      Why Brain-on-a-Chip research matters for the future of AI
-                    </h2>
+                    <Link to="/articles/neuroplasticity">
+                      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition-colors">
+                        Neuroplasticity
+                      </h2>
+                    </Link>
 
                     {/* Excerpt */}
                     <p className="text-gray-700 leading-relaxed mb-6">
-                      Wetware Computing—that bold idea of using living neuronal networks to compute—isn't sci-fi anymore. A groundbreaking new review, Advanced Brain-on-a-Chip for Wetware Computing: A Review, just landed in Advanced Science and...
+                      Neuroplasticity refers to the brain's capacity to reorganize its wiring. This process can involve neurogenesis, synaptogenesis, and increasing or decreasing the strength of existing synapses...
                     </p>
 
                     {/* Footer */}
@@ -121,19 +122,20 @@ const ArticlesPage = () => {
                       </div>
 
                       {/* Continue Reading */}
-                      <motion.a
-                        href="#"
-                        className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
-                        whileHover={{ x: 5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        Continue reading
-                      </motion.a>
+                      <Link to="/articles/neuroplasticity">
+                        <motion.span
+                          className="text-gray-600 hover:text-blue-600 font-medium transition-colors cursor-pointer inline-block"
+                          whileHover={{ x: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          Continue reading
+                        </motion.span>
+                      </Link>
                     </div>
                   </div>
                 </motion.article>
 
-                {/* Second Article */}
+                {/* Brain-on-a-Chip Article */}
                 <motion.article 
                   className="bg-white rounded-2xl overflow-hidden shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -141,14 +143,14 @@ const ArticlesPage = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   {/* Article Image */}
-                  <div className="relative h-64 md:h-80 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500">
+                  <div className="relative h-64 md:h-80 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-white text-center">
                         <div className="w-32 h-32 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
                           <div className="w-16 h-16 bg-white/30 rounded-full"></div>
                         </div>
-                        <p className="text-sm opacity-80">Research Visualization</p>
+                        <p className="text-sm opacity-80">Neural Network Visualization</p>
                       </div>
                     </div>
                   </div>
@@ -157,17 +159,17 @@ const ArticlesPage = () => {
                   <div className="p-8">
                     {/* Author & Date */}
                     <div className="text-sm text-gray-500 mb-4">
-                      Ewelina Kurtys • April 11, 2025
+                      Ewelina Kurtys • August 21, 2025
                     </div>
 
                     {/* Title */}
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                      Unconventional Computing
+                      Why Brain-on-a-Chip research matters for the future of AI
                     </h2>
 
                     {/* Excerpt */}
                     <p className="text-gray-700 leading-relaxed mb-6">
-                      Exploring new paradigms in computational approaches that challenge traditional silicon-based systems...
+                      Wetware Computing—that bold idea of using living neuronal networks to compute—isn't sci-fi anymore. A groundbreaking new review, Advanced Brain-on-a-Chip for Wetware Computing: A Review, just landed in Advanced Science and...
                     </p>
 
                     {/* Footer */}
