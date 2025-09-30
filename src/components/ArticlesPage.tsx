@@ -126,11 +126,6 @@ const ArticlesPage = () => {
 
                     {/* Article Content */}
                     <div className="p-8">
-                      {/* Author & Date */}
-                      <div className="text-sm text-gray-500 mb-4">
-                        {article.author} • {article.date}
-                      </div>
-
                       {/* Title */}
                       <Link to={article.link}>
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition-colors">

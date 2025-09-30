@@ -105,9 +105,9 @@ const SimpleAnimations = () => {
           background: 'radial-gradient(circle, rgba(251, 146, 60, 0.9) 0%, rgba(59, 130, 246, 0.7) 50%, rgba(236, 72, 153, 0.5) 100%)',
           borderRadius: '50%',
           filter: 'blur(30px)',
-          transform: 'translateX(50%)',
-          maxWidth: '50vw',
-          maxHeight: '50vh'
+          transform: 'translateX(25%)',
+          maxWidth: '40vw',
+          maxHeight: '40vh'
         }}
       />
 
